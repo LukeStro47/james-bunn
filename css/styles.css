@@ -107,9 +107,9 @@ a {
 }
 
 .portrait {
-  flex: 0 0 108px;
-  width: 108px;
-  height: 108px;
+  flex: 0 0 148px;
+  width: 148px;
+  height: 148px;
   border-radius: 50%;
   border: 1px solid var(--color-border);
   background: var(--color-bg-elevated);
@@ -117,7 +117,7 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
 }
 
 .portrait span {
@@ -163,12 +163,6 @@ a {
   margin: 0 0 18px;
 }
 
-.meta-line {
-  color: var(--color-muted);
-  font-size: 0.88rem;
-  margin: 22px 0 0;
-}
-
 .social-row {
   display: flex;
   flex-wrap: wrap;
@@ -176,18 +170,43 @@ a {
   margin-top: 18px;
 }
 
-.social-row a {
+/* Buttons */
+.btn {
+  display: inline-block;
   font-size: 0.85rem;
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-  background: var(--color-bg-elevated);
-  padding: 8px 16px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 12px 22px;
+  border-radius: 5px;
   text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease, border-color 0.12s ease, color 0.12s ease;
 }
 
-.social-row a:hover {
-  color: var(--color-accent);
+.btn-primary {
+  background: var(--color-accent);
+  color: #16180f;
   border-color: var(--color-accent);
+  box-shadow: 0 6px 16px rgba(211, 172, 104, 0.22);
+}
+
+.btn-primary:hover {
+  background: #e2c084;
+  border-color: #e2c084;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(211, 172, 104, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-1px);
 }
 
 /* Blocks */
@@ -258,26 +277,6 @@ main {
   margin: 0;
 }
 
-/* Chips (jurisdictions) */
-.chip-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 0;
-}
-
-.chip-row span {
-  border: 1px solid var(--color-border);
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-size: 0.85rem;
-  padding: 8px 16px;
-}
-
-.block:nth-of-type(even) .chip-row span {
-  background: var(--color-bg-elevated);
-}
-
 /* Client grid */
 .client-grid {
   list-style: none;
@@ -325,13 +324,6 @@ main {
   border-color: #363a2f;
 }
 
-.record-year {
-  flex: 0 0 108px;
-  color: var(--color-accent);
-  font-size: 0.8rem;
-  padding-top: 2px;
-}
-
 .record-title {
   color: var(--color-text);
   font-size: 1rem;
@@ -346,70 +338,9 @@ main {
   max-width: 500px;
 }
 
-.record-sublabel {
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.72rem;
-  color: var(--color-faint);
-  margin: 36px 0 14px;
-}
-
-.record-compact,
-.record-minor {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border: 1px solid var(--color-border);
-}
-
-.record-compact li,
-.record-minor li {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
-  padding: 13px 18px;
-  border-top: 1px solid var(--color-border);
-}
-
-.record-compact li:first-child,
-.record-minor li:first-child {
-  border-top: none;
-}
-
-.record-compact li span:first-child {
-  color: var(--color-text);
-  font-size: 0.92rem;
-}
-
-.record-minor li span:first-child {
-  color: var(--color-muted);
-  font-size: 0.85rem;
-}
-
-.record-compact-date {
-  flex: 0 0 auto;
-  color: var(--color-faint);
-  font-size: 0.8rem;
-  white-space: nowrap;
-}
-
 /* Work */
 .work-link {
   margin: 28px 0 0;
-}
-
-.work-link a {
-  font-size: 0.88rem;
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
-  padding: 10px 18px;
-  text-decoration: none;
-}
-
-.work-link a:hover {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
 }
 
 /* Footer */
@@ -441,9 +372,9 @@ main {
   }
 
   .portrait {
-    flex: 0 0 80px;
-    width: 80px;
-    height: 80px;
+    flex: 0 0 104px;
+    width: 104px;
+    height: 104px;
   }
 
   .header-row {
@@ -464,13 +395,6 @@ main {
     flex-direction: column;
     gap: 10px;
     padding: 18px;
-  }
-
-  .record-compact li,
-  .record-minor li {
-    flex-direction: column;
-    gap: 4px;
-    padding: 12px 16px;
   }
 
   .nav {
